@@ -1,5 +1,5 @@
 angular.module('myApp')
- .controller('myProgressCtrl', function($scope, $http, Progress) {
+ .controller('myProgressCtrl', function($scope,  Progress) {
 
   var progressPromise = Progress.getData();
   progressPromise.then(function(res){
