@@ -1,0 +1,46 @@
+$checkbox-size: 18px;
+
+div#container{
+	margin: auto;
+	margin-top: 200px;
+	margin-bottom: 200px;
+    width: 60%;
+
+    border: 3px solid #73AD21;
+    padding: 10px;
+
+    .myProgress{
+    	width: 60%;
+    	margin: auto;
+    	overflow: hidden;
+    	margin-top: 20px;
+    	background-color: #ddd;
+    	.myBar{
+    		width: 1%;
+  			height: 30px;
+  			background-color: #4CAF50;
+    	}
+
+    	.err{
+    		background: red;
+    	}
+
+    }
+
+    #footer{
+    	height: 30px;
+    	margin: auto;
+    	text-align: center;
+    	margin-top: 20px;
+
+    	button{
+    		border: 1px solid black;
+    		background: grey;
+    		margin-left: 5px;
+    	}
+    	button:focus {outline:0;}
+    }
+}
+
+
+
