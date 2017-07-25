@@ -18,7 +18,7 @@
          #progress{{$index}}
        </option>
       </select>
-      <button type="button" ng-repeat="item in data.buttons" ng-click="setBarWidth(item)">
+      <button type="button" ng-repeat="item in data.buttons  track by $index" ng-click="setBarWidth(item)">
           <span ng-if="item > 0">+</span>
          {{ item }}
       </button>
