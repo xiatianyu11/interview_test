@@ -19,6 +19,7 @@ div#container{
     	margin-top: 20px;
     	background-color: $barbgcolor;
         position: relative;
+
     	.myBar{
     		width: 1%;
   			height: 30px;
@@ -30,6 +31,7 @@ div#container{
             position: absolute;
             display: block;
             width: 100%;
+            margin-top:5px;
             text-align:center;
             color: black;
          }
