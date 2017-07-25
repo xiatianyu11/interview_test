@@ -11,7 +11,7 @@ gulp.task('browserSync', function() {
     server: {
       baseDir: 'app',
       routes: {
-        "/node_modules": "node_modules"
+         "/lib": "lib"
       }
     },
   })
