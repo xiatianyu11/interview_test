@@ -6,7 +6,7 @@
 
 <div id="container" ng-controller="myProgressCtrl">
 
-   <div class="myProgress" ng-repeat="bar in data.bars">
+   <div class="myProgress" ng-repeat="bar in data.bars track by $index">
       <div id="bar{{$index}}" class="myBar" ng-class="{'err': isInvalid($index)}" ng-style="{width: getBarWidth($index, bar) + '%'}" >
         <span>{{ barWidth[$index] }}%</span>
       </div>

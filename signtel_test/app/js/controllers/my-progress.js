@@ -1,10 +1,14 @@
 angular.module('myApp')
- .controller('myProgressCtrl', function($scope,  Progress) {
+ .controller('myProgressCtrl', function($scope, $timeout,  Progress) {
 
   var progressPromise = Progress.getData();
   progressPromise.then(function(res){
-      $scope.data = res.data;
-      console.log($scope.data);
+      $timeout(function(){
+        $scope.data = res.data;
+         console.log($scope.data);
+      });
+
+
   },function(err){
        console.log('************ Get Bar List Error', err);
   });
