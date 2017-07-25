@@ -8,18 +8,19 @@
 
    <div class="myProgress" ng-repeat="bar in data.bars">
       <div id="bar{{$index}}" class="myBar" ng-class="{'err': isInvalid($index)}" ng-style="{width: getBarWidth($index, bar) + '%'}" >
-         {{ barWidth[$index] }}%
+        <span>{{ barWidth[$index] }}%</span>
       </div>
    </div>
 
    <div id="footer" >
       <select ng-model="selectedIndex">
-       <option ng-repeat="d in data.bars track by $index" ng-value="$index">
+       <option ng-repeat="d in data.bars track by $index" ng-value="$index" ng-selected="selectedIndex === $index">
          #progress{{$index}}
        </option>
       </select>
       <button type="button" ng-repeat="item in data.buttons" ng-click="setBarWidth(item)">
-         {{item}}
+          <span ng-if="item > 0">+</span>
+         {{ item }}
       </button>
    </div>
 

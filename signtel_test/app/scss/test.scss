@@ -1,12 +1,15 @@
-$checkbox-size: 18px;
+$barcolor: #badbe6;
+$barbgcolor: #dedede;
+$fontcolor: #627874;
 
 div#container{
 	margin: auto;
 	margin-top: 200px;
 	margin-bottom: 200px;
     width: 60%;
+    color:$fontcolor;
 
-    border: 3px solid #73AD21;
+    border: 3px solid #cad4d9;
     padding: 10px;
 
     .myProgress{
@@ -14,12 +17,22 @@ div#container{
     	margin: auto;
     	overflow: hidden;
     	margin-top: 20px;
-    	background-color: #ddd;
+    	background-color: $barbgcolor;
+        position: relative;
     	.myBar{
     		width: 1%;
   			height: 30px;
-  			background-color: #4CAF50;
+  			background-color: $barcolor;
+
     	}
+
+        span {
+            position: absolute;
+            display: block;
+            width: 100%;
+            text-align:center;
+            color: black;
+         }
 
     	.err{
     		background: red;
@@ -32,12 +45,18 @@ div#container{
     	margin: auto;
     	text-align: center;
     	margin-top: 20px;
-
+        select{
+            border: 1px solid #3b3b3b;
+            background: #f5f5f5;
+            color: #495c66;
+        }
     	button{
-    		border: 1px solid black;
-    		background: grey;
+    		border: 1px solid #3b3b3b;
+    		background: #f5f5f5;
+            color: #495c66;
     		margin-left: 5px;
     	}
+        select:focus {outline:0;}
     	button:focus {outline:0;}
     }
 }
