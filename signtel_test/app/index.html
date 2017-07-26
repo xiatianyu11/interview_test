@@ -4,29 +4,9 @@
 <link rel="stylesheet" type="text/css" href="css/test.css">
 <body ng-app="myApp">
 
-<div id="container" ng-controller="myProgressCtrl">
-
-   <div class="myProgress" ng-repeat="bar in data.bars track by $index">
-      <div id="bar{{$index}}" class="myBar" ng-class="{'err': isInvalid($index)}" ng-style="{width: getBarWidth($index, bar) + '%'}" >
-        <span>{{ barWidth[$index] }}%</span>
-      </div>
-   </div>
-
-   <div id="footer" >
-      <select ng-model="selectedIndex">
-       <option ng-repeat="d in data.bars track by $index" ng-value="$index" ng-selected="selectedIndex === $index">
-         #progress{{$index}}
-       </option>
-      </select>
-      <button type="button" ng-repeat="item in data.buttons  track by $index" ng-click="setBarWidth(item)">
-          <span ng-if="item > 0">+</span>
-         {{ item }}
-      </button>
-   </div>
-
-</div>
+<my-progress></my-progress>
 <script src="js/app.js"></script>
-<script src="js/controllers/my-progress.js"></script>
+<script src="js/directives/my-progress.js"></script>
 <script src="js/services/my-progress.js"></script>
 </body>
 </html>

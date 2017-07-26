@@ -1,1 +1,6 @@
-var app = angular.module('myApp', []);
+angular.module('myApp', [])
+.run(function($http, $templateCache){
+
+	$http.get('views/myProgress.html', { cache: $templateCache });
+
+});
